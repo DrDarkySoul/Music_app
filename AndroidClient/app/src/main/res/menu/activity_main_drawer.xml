@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/friends"
+            android:icon="@drawable/ic_menu_friends"
+            android:title="@string/menu_friends" />
+        <item
+            android:id="@+id/music"
+            android:icon="@drawable/ic_menu_music"
+            android:title="@string/menu_music" />
+        <item
+            android:id="@+id/locations"
+            android:icon="@drawable/ic_menu_locations"
+            android:title="@string/menu_locations" />
+
+        <item
+            android:id="@+id/map"
+            android:icon="@drawable/ic_menu_map"
+            android:title="@string/menu_map" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="none"
+        android:menuCategory="secondary">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_menu_about"
+            android:menuCategory="secondary"
+            android:title="@string/menu_about_program" />
+
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/ic_menu_exit"
+            android:menuCategory="secondary"
+            android:title="@string/menu_exit" />
+    </group>
+</menu>
