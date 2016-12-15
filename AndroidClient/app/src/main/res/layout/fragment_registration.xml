@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="@dimen/padding_medium">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnFinish"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/rlUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilLoginUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etLoginUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="197dp"
+                    android:ems="10"
+                    android:hint="Login"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/size_text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilPasswordRepeatUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tilPasswordUser"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etPasswordRepeatUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/etPasswordUser"
+                    android:ems="10"
+                    android:hint="Repeat password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilNicknameUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tilPasswordRepeatUser"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etNicknameUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="197dp"
+                    android:ems="10"
+                    android:hint="Nickname"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/size_text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilEmailUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tilNicknameUser"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etEmailUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="197dp"
+                    android:ems="10"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/size_text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilPasswordUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:layout_below="@+id/tilLoginUser"
+                android:layout_alignParentStart="true">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etPasswordUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/etLogin"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/size_text" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Sign Up"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>
