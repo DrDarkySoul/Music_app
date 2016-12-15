@@ -1,0 +1,94 @@
+//Friends
+{"friends":[
+	{"friend": {
+		"id": 43, //id друга в БД
+		"name": "Иванов Иван" //Имя друга
+	}},
+	{"friend": {
+		"id": 62, //id друга в БД
+		"name": "Гаврилов Сергей" //Имя друга
+	}},
+	{"friend": {
+		"id": 128, //id друга в БД
+		"name": "Джон Смит" //Имя друга
+	}},
+]
+}
+
+//Location
+{"locations":[
+	{"location": {
+		"id": 43, //id позиции в БД
+		"latitude": 55.123,
+		"longitude": 12.043,
+		"title": "Бутово",
+		"photo": "/Users/Desktop/butovo.png"
+	}},
+	{"location": {
+		"id": 43, //id позиции в БД
+		"latitude": 125.123,
+		"longitude": 148.043,
+		"title": "Бобруйск",
+		"photo": "/Users/Desktop/butovo.png"
+	}},
+]
+}
+
+//Location_notes. 
+//Тут либо делать запрос на сервер и получать json в таком виде:
+{"location_notes": {
+		"id": 43, //id позиции в БД
+		"user_id": 51,
+		"music_id": 12,
+	},
+}
+//либо создавать вьюху в БД, в которой сразу будет отражена инфа о пользователе и музыке, брать инфу из этой вьюхи, 
+//формировать json с этой инфой и отправлять клиенту
+
+
+//Music
+{"musics": [
+	{"song":
+		{"id": 43, //id позиции в БД
+		"title": "Hapy New Year",
+		"artist": "Abba",
+		"album": "New Year",
+		"duration": 3.28,
+		"photo": "/Users/Desktop/newYear.png",}
+	},
+	{"song":
+		{"id": 76, //id позиции в БД
+		"title": "Girl",
+		"artist": "The Beatles",
+		"album": "New Year",
+		"duration": 2.18,
+		"photo": "/Users/Desktop/beatles.png",}
+	},
+	]
+}
+
+//Playlist
+//Ситуация такая же, как с location_notes. Либо так, либо формировать вьюшку.
+{"playlist":{
+	"user_id": 123,
+	"music_id": 54,
+}}
+
+//User
+{"user": {
+	"id": 543,
+	"login": "Bond",
+	"password": "qwerty", //по хорошему тут должен храниться хэш пароля
+	"email": "bond777@gmail.com",
+	"nickname": "james",
+	"photo": "/Users/Desktop/beatles.png",
+}}
+
+
+
+
+
+
+
+
+

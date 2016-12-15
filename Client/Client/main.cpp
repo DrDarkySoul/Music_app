@@ -7,16 +7,17 @@
 //
 #include <iostream>
 #include <string.h>
-
+#include "json.hpp"
 #include <boost/asio.hpp>
+
 
 using namespace std;
 using namespace boost;
+using namespace nlohmann;
+
 
 int main(int argc, const char * argv[])
 {
-    cout << "Client is running\n";
-    
     try
     {
         asio::io_service io;
@@ -36,9 +37,13 @@ int main(int argc, const char * argv[])
         }
         
         asio::streambuf sbuf;
-        asio::read_until(socket, sbuf, "!");
-        
+        //Получение сообщения от сервера
+        asio::read_until(socket, sbuf, "\0");
         cout << &sbuf << endl;
+        
+        //Отправка соощения на сервер
+//        asio::write(socket, asio::buffer(str));
+        
         socket.close();
     }
     catch(std::exception& e)

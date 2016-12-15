@@ -225,6 +225,7 @@
 					/usr/local/lib/,
 					/usr/local/Cellar/boost/1.61.0/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = (
 					"-lpthread",
 					"-lboost_system-mt",
@@ -243,6 +244,7 @@
 					/usr/local/lib/,
 					/usr/local/Cellar/boost/1.61.0/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = (
 					"-lpthread",
 					"-lboost_system-mt",
