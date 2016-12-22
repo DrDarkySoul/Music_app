@@ -1,0 +1,218 @@
+[
+  {
+    "TEMPLATES FOR MUSIC REQUESTS": [
+      //getMusicAction()
+      {
+        "controller": "music",
+        "action": "get",
+        "params": {
+          "id": 1
+        }
+      },
+      //getMusicsAction()
+      {
+        "controller": "music",
+        "action": "get",
+        "params": {
+          "start": 1,
+          "end": 1
+        }
+      },
+      //addMusicToPlayListAction()
+      {
+        "controller": "music",
+        "action": "addToPlaylist",
+        "params": {
+          "user_id": 1,
+          "music_id": 1
+        }
+      },
+      //deleteMusicFromPlayListAction()
+      {
+        "controller": "music",
+        "action": "deleteFromPlaylist",
+        "params": {
+          "user_id": 1,
+          "music_id": 1
+        }
+      },
+      //getSmbPlayListAction()
+      {
+        "controller": "music",
+        "action": "getSmbPlaylist",
+        "params": {
+          "user_id": 1,
+          "start": 1,
+          "end": 1
+        }
+      },
+      //getSmbPlayListFullAction()
+      {
+        "controller": "music",
+        "action": "getSmbPlaylist",
+        "params": {
+          "user_id": 1,
+          "start": 1,
+          "end": 1
+        }
+      }
+    ]
+  },
+  {
+    "TEMPLATES FOR LOCATION REQUEST": [
+      //addLocationAction()
+      {
+        "controller": "location",
+        "action": "add",
+        "params": {
+          "latitude": 2.342,
+          "longitude": 1.2324,
+          "title": "richat-cmo",
+          "photo": "base64 code"
+        }
+      },
+      //getLocationAction()
+      {
+        "controller": "location",
+        "action": "get",
+        "params": {
+          "id": 1
+        }
+      },
+      //addLocationNoteAction()
+      {
+        "controller": "location",
+        "action": "addNote",
+        "params": {
+          "user_id": 1,
+          "location_id": 2,
+          "music_id": 2
+        }
+      },
+      //deleteLocationNoteAction()
+      {
+        "controller": "location",
+        "action": "deleteNote",
+        "params": {
+          "user_id": 1,
+          "location_id": 2,
+          "music_id": 2
+        }
+      },
+      //getSmbLocationNotesAction(){
+      {
+        "controller": "location",
+        "action": "getSmbNotes",
+        "params": {
+          "user_id": 1
+        }
+      },
+      //getSmbLocationNotesFullAction()
+      {
+        "controller": "location",
+        "action": "getSmbNotesFull",
+        "params": {
+          "user_id": 1
+        }
+      },
+      //getLocationNotesAction()
+      {
+        "controller": "location",
+        "action": "getNotes",
+        "params": {
+          "start": 1,
+          "end": 1
+        }
+      },
+      //getLocationNotesFullAction()
+      {
+        "controller": "location",
+        "action": "getNotesFull",
+        "params": {
+          "start": 1,
+          "end": 1
+        }
+      }
+    ]
+  },
+  {
+    "TEMPLATES FOR USER REQUEST": [
+      //registrateAction()
+      {
+        "controller": "user",
+        "action": "registrate",
+        "params": {
+          "login": "rishat0",
+          "password": "IIUEWNM!@#$JK",
+          "email": "supergirl123rishat@mail.ru",
+          "nickname": "kutak77",
+          "photo": "base64 code"
+        }
+      },
+      //loginAction()
+      {
+        "controller": "user",
+        "action": "login",
+        "params": {
+          "login": "rishat0",
+          "password": "IIUEWNM!@#$JK"
+        }
+      },
+      //getUserAction()
+      {
+        "controller": "user",
+        "action": "get",
+        "params": {
+          "id": 1
+        }
+      },
+      //addFriendAction()
+      {
+        "controller": "user",
+        "action": "addFriend",
+        "params": {
+          "user_id_1": 1,
+          "user_id_2": 2
+        }
+      },
+      //deleteFriendAction()
+      {
+        "controller": "user",
+        "action": "deleteFriend",
+        "params": {
+          "user_id_1": 1,
+          "user_id_2": 2
+        }
+      },
+      //getSmbFriendsAction()
+      {
+        "controller": "user",
+        "action": "getSmbFriends",
+        "params": {
+          "user_id_1": 1,
+          "start": 1,
+          "end": 1
+        }
+      },
+      //getSmbFriendsFullAction()
+      {
+        "controller": "user",
+        "action": "getSmbFriendsFull",
+        "params": {
+          "user_id_1": 1,
+          "start": 1,
+          "end": 1
+        }
+      },
+      //getUsersAction()
+      {
+        "controller": "user",
+        "action": "getUsers",
+        "params": {
+          "start": 1,
+          "end": 1
+        }
+      }
+    ]
+  }
+]
