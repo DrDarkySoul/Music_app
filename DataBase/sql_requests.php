@@ -26,7 +26,7 @@ $getUser = "SELECT * FROM user WHERE id=id";
 $addFriend = "SELECT * FROM friends WHERE (user_id_1, user_id_2)=(user_id_1, user_id_2)";
     "INSERT friends (user_id_1, user_id_2) VALUE (user_id_1, user_id_2)";
 $deleteFriend = "DELETE FROM friends WHERE (user_id_1, user_id_2)=(user_id_1, user_id_2)";
-$getSmbFriends = "SELECT * FROM friends WHERE user_id_1 = user_id";
+$getSmbFriends = "SELECT * FROM friends WHERE user_id_1 = user_id AND id BETWEEN start AND end";
 $getUsers = "SELECT * FROM user WHERE id BETWEEN start AND end";
 
 #PlayList
