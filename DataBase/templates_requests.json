@@ -49,7 +49,7 @@
       //getSmbPlayListFullAction()
       {
         "controller": "music",
-        "action": "getSmbPlaylist",
+        "action": "getSmbPlaylistFull",
         "params": {
           "user_id": 1,
           "start": 1,
