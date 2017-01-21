@@ -1,0 +1,253 @@
+[
+  {
+    "TEMPLATES FOR MUSIC REQUESTS": [
+      //getMusicAction()
+      {
+        "id": 1,
+        "title": "text",
+        "artist": "text",
+        "album": "text",
+        "duration": 124,
+        "photo": "text"
+      },
+      //getMusicsAction()
+      {
+        "musics": [
+          {
+            "id": 1,
+            "title": "text",
+            "artist": "text",
+            "album": "text",
+            "duration": 124,
+            "photo": "text"
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //addMusicToPlayListAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //deleteMusicFromPlayListAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //getSmbPlayListAction()
+      {
+        "musics": [
+          {
+            "id": 1,
+            "user_id": 1,
+            "music_id": 1
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //getSmbPlayListFullAction()
+      {
+        "musics": [
+          {
+            "id": 1,
+            "title": "text",
+            "artist": "text",
+            "album": "text",
+            "duration": 124,
+            "photo": "text"
+          },
+          {
+            //same
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "TEMPLATES FOR LOCATION REQUEST": [
+      //addLocationAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //getLocationAction()
+      {
+        "id": 1,
+        "latitude": 2.1324,
+        "longitude": 2.1324,
+        "title": "text",
+        "photo": "text"
+      },
+      //addLocationNoteAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //deleteLocationNoteAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //getSmbLocationNotesAction(){
+      {
+        "location_notes": [
+          {
+            "id": 1,
+            "user_id": 1,
+            "location_id": 1,
+            "music_id": 1
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //getSmbLocationNotesFullAction()
+      {
+        "location_notes": [
+          {
+            "location": {
+              "id": 1,
+              "latitude": 2.1324,
+              "longitude": 2.1324,
+              "title": "text",
+              "photo": "text"
+            },
+            "music": {
+              "id": 1,
+              "title": "text",
+              "artist": "text",
+              "album": "text",
+              "duration": 124,
+              "photo": "text"
+            }
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //getLocationNotesAction()
+      {
+        "location_notes": [
+          {
+            "id": 1,
+            "user_id": 1,
+            "location_id": 1,
+            "music_id": 1
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //getLocationNotesFullAction()
+      {
+        "location_notes": [
+          {
+            "location": {
+              "id": 1,
+              "latitude": 2.1324,
+              "longitude": 2.1324,
+              "title": "text",
+              "photo": "text"
+            },
+            "music": {
+              "id": 1,
+              "title": "text",
+              "artist": "text",
+              "album": "text",
+              "duration": 124,
+              "photo": "text"
+            }
+          },
+          {
+            //same
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "TEMPLATES FOR USER REQUEST": [
+      //registrateAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //loginAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //getUserAction()
+      {
+        "id":1,
+        "login":"text",
+        "password":"text",
+        "email":"text",
+        "nickname":"text",
+        "photo":"text"
+      },
+      //addFriendAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //deleteFriendAction()
+      {
+        "result": "success/error"
+        //смотря какой результат при работе с БД
+      },
+      //getSmbFriendsAction()
+      {
+        "friends":[
+          {
+            "id":1,
+            "user_id_1":1,
+            "user_id_2":1
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //getSmbFriendsFullAction()
+      {
+        "friends":[
+          {
+            "id":1,
+            "login":"text",
+            "password":"text",
+            "email":"text",
+            "nickname":"text",
+            "photo":"text"
+          },
+          {
+            //same
+          }
+        ]
+      },
+      //getUsersAction()
+      {
+        "users":[
+          {
+            "id":1,
+            "login":"text",
+            "password":"text",
+            "email":"text",
+            "nickname":"text",
+            "photo":"text"
+          },
+          {
+            //same
+          }
+        ]
+      }
+    ]
+  }
+]
