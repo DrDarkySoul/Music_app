@@ -11,7 +11,7 @@ CMySql::CMySql()
 string CMySql::base_add(string first,string second)
 {
 	string query ="INSERT INTO "+first+" Values("+second+")";
-//	cout << query;
+	cout << query;
 	try{
 		stmt->execute(query);
 		return "YES";
@@ -96,6 +96,45 @@ sql::ResultSet* CMySql::getBasesAction(string table, string str_begin, string st
 	//cout << query;
 	return stmt->executeQuery(query);
 }
+
+
+sql::ResultSet* CMySql::getbaseSmbLocationNotesFullAction(int user_id)
+{
+	pstmt = con->prepareStatement("SELECT * FROM  location_notes INNER JOIN music ON location_notes.music_id = music.id INNER JOIN location ON location_notes.location_id=location.id WHERE user_id=?");
+	pstmt->setInt(1, user_id);
+	return pstmt->executeQuery();
+}
+
+
+sql::ResultSet* CMySql::getbaseLocationNotesFullAction(int begin, int end)
+{
+	pstmt = con->prepareStatement("SELECT * FROM  location_notes INNER JOIN music ON location_notes.music_id = music.id INNER JOIN location ON location_notes.location_id=location.id WHERE location.id BETWEEN ? AND ?");
+	pstmt->setInt(1, begin);
+	pstmt->setInt(2, end);
+	return pstmt->executeQuery();
+}
+
+
+sql::ResultSet* CMySql::getbaseSmbFriendsFullAction(int user_id, int begin, int end)
+{
+	pstmt = con->prepareStatement("SELECT * FROM friends INNER JOIN user ON friends.user_id_2 = user.id WHERE user_id_1 = ? AND friends.id BETWEEN ? AND ?");
+	pstmt->setInt(1, user_id);
+	pstmt->setInt(2, begin);
+	pstmt->setInt(3, end);
+	return pstmt->executeQuery();
+}
+
+
+sql::ResultSet* CMySql::getbaseSmbPlayListFullAction(int user_id, int begin, int end)
+{
+	pstmt = con->prepareStatement("SELECT * FROM playlist INNER JOIN music ON playlist.music_id=music.id WHERE playlist.user_id=? AND playlist.id BETWEEN ? AND ?");
+	pstmt->setInt(1, user_id);
+	pstmt->setInt(2, begin);
+	pstmt->setInt(3, end);
+	return pstmt->executeQuery();
+}
+
+
 CMySql::~CMySql()
 {
 	/*delete res;

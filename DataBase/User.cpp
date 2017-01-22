@@ -1,23 +1,23 @@
 #include "User.h"
 #include "CMySql.h"
-string CUser::registrateAction(string user_login, string user_password, string user_email, string user_nickname, string user_photo)
+string User::registrateAction(string user_login, string user_password, string user_email, string user_nickname, string user_photo)
 {
 	return base_add("User(login,password,email,photo,nickname)","\""+user_login+"\",\""+user_password+"\",\""+user_email+"\",\""+user_nickname+"\",\""+user_photo+"\"");
 }
-string CUser::deleteUser(int id)
+string User::deleteUser(int id)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
 	return base_del("User",str_id);
 }
-CUser CUser::getUserAction(int id)
+User User::getUserAction(int id)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
 	res = getBaseAction("User", str_id);
-	CUser total;
+	User total;
 	if (res->next() == NULL){
 		total.id = NULL;
 		total.login = "";
@@ -35,7 +35,7 @@ CUser CUser::getUserAction(int id)
 	total.photo = res->getString(6);
 	return total;
 }
-vector<CUser> CUser::getUsersAction(int begin, int end)
+vector<User> User::getUsersAction(int begin, int end)
 {
 	char buf[255];
 	itoa(begin, buf, 10);
@@ -43,8 +43,8 @@ vector<CUser> CUser::getUsersAction(int begin, int end)
 	itoa(end, buf, 10);
 	string str_end = buf;
 	res = getBasesAction("User", str_begin, str_end);
-	vector<CUser> Total;
-	CUser total;
+	vector<User> Total;
+	User total;
 	if (res->next() == NULL){
 		total.id = NULL;
 		total.login = "";
@@ -66,11 +66,11 @@ vector<CUser> CUser::getUsersAction(int begin, int end)
 		if (res->next() == NULL) return Total;
 	}
 }
-CUser::CUser()
+User::User()
 {
 }
 
 
-CUser::~CUser()
+User::~User()
 {
 }

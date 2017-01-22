@@ -1,6 +1,6 @@
 #pragma once
 #include "CMySql.h"
-class CUser :
+class User :
 	public CMySql
 {
 public:
@@ -13,9 +13,9 @@ public:
 
 	string registrateAction(string user_login, string user_password, string user_email, string user_nickname, string user_photo);
 	string deleteUser(int id);
-	CUser getUserAction(int id);
-	vector<CUser> getUsersAction(int begin, int end);
-	CUser();
-	~CUser();
+	User getUserAction(int id);
+	vector<User> getUsersAction(int begin, int end);
+	User();
+	~User();
 };
 

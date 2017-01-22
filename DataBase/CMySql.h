@@ -28,9 +28,12 @@ public:
 	sql::ResultSet* getbaseFriendsAction(string first, string second="");
 	sql::ResultSet* getBaseAction(string table,string str_id);
 	sql::ResultSet* getBasesAction(string table, string str_begin, string str_end);
-	sql::ResultSet* CMySql::getbasePlaylistAction(string first, string second = "");
-	sql::ResultSet* CMySql::getbaseLocation_noteAction(string first, string second="");
-	
+	sql::ResultSet* getbasePlaylistAction(string first, string second = "");
+	sql::ResultSet* getbaseLocation_noteAction(string first, string second="");
+	sql::ResultSet* getbaseSmbLocationNotesFullAction(int user_id);
+	sql::ResultSet* getbaseLocationNotesFullAction(int begin,int end);
+	sql::ResultSet* getbaseSmbFriendsFullAction(int user_id, int begin, int end);
+	sql::ResultSet* getbaseSmbPlayListFullAction(int user_id, int begin, int end);
 	CMySql();
 	~CMySql();
 };

@@ -1,7 +1,7 @@
 #pragma once
 #include "CMySql.h"
 #include<vector>
-class Cmusic :
+class music :
 	public CMySql
 {
 public:
@@ -14,9 +14,9 @@ public:
 
 	string addMusic(string title,string artist, string album, int duration, string photo);
 	string deleteMusic(int id);
-	Cmusic getMusicAction(int id);
-	vector<Cmusic> getMusicsAction(int begin, int end);
-	Cmusic();
-	~Cmusic();
+	music getMusicAction(int id);
+	vector<music> getMusicsAction(int begin, int end);
+	music();
+	~music();
 };
 

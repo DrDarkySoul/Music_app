@@ -1,6 +1,7 @@
 #pragma once
 #include "CMySql.h"
-class CFriends :
+#include "User.h"
+class Friends :
 	public CMySql
 {
 public:
@@ -11,8 +12,8 @@ public:
 	string deleteFriendAction(int user_id_1, int user_id_2);
 	vector<int> getSmbFriendsFullAction(int id);
 	vector<int> getSmbFriendsAction(int id, int begin, int end);
-
-	CFriends();
-	~CFriends();
+	vector<User> getSmbFriendsFullAction(int user_id, int begin, int end);
+	Friends();
+	~Friends();
 };
 

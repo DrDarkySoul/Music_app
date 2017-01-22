@@ -1,5 +1,5 @@
 #include "music.h"
-string Cmusic::addMusic(string title, string artist, string album, int duration, string photo)
+string music::addMusic(string title, string artist, string album, int duration, string photo)
 {
 	char*buf = new char[255];
 	itoa(duration,buf,10);
@@ -7,20 +7,20 @@ string Cmusic::addMusic(string title, string artist, string album, int duration,
 	delete buf;
 	return base_add("music(title,artist,album,duration,photo)", "\"" + title + "\",\"" + artist + "\",\"" + album + "\"," + str_dur + ",\"" + photo + "\"");
 }
-string Cmusic::deleteMusic(int id)
+string music::deleteMusic(int id)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
 	return base_del("music", str_id);
 }
-Cmusic Cmusic::getMusicAction(int id)
+music music::getMusicAction(int id)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
 	res = getBaseAction("music", str_id);
-	Cmusic total;
+	music total;
 	if (res->next() == NULL){
 		total.id = NULL;
 		total.title = "";
@@ -38,7 +38,7 @@ Cmusic Cmusic::getMusicAction(int id)
 	total.photo = res->getString(6);
 	return total;
 }
-vector<Cmusic> Cmusic::getMusicsAction(int begin, int end)
+vector<music> music::getMusicsAction(int begin, int end)
 {
 	char buf[255];
 	itoa(begin, buf, 10);
@@ -46,8 +46,8 @@ vector<Cmusic> Cmusic::getMusicsAction(int begin, int end)
 	itoa(end, buf, 10);
 	string str_end = buf;
 	res = getBasesAction("music", str_begin, str_end);
-	vector<Cmusic> Total;
-	Cmusic total;
+	vector<music> Total;
+	music total;
 	if (res->next() == NULL){
 		total.id = NULL;
 		total.title = "";
@@ -69,11 +69,11 @@ vector<Cmusic> Cmusic::getMusicsAction(int begin, int end)
 		if (res->next() == NULL) return Total;
 	}
 }
-Cmusic::Cmusic()
+music::music()
 {
 }
 
 
-Cmusic::~Cmusic()
+music::~music()
 {
 }

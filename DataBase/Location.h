@@ -1,6 +1,6 @@
 #pragma once
 #include "CMySql.h"
-class CLocation :
+class Location :
 	public CMySql
 {
 public:
@@ -11,8 +11,8 @@ public:
 	string photo;
 	string addLocation(double latitude, double longitude, string title, string photo);// уникальность третья позиция?
 	string deleteLocation(int id);
-	CLocation getLocationAction(int id);
-	CLocation();
-	~CLocation();
+	Location getLocationAction(int id);
+	Location();
+	~Location();
 };
 

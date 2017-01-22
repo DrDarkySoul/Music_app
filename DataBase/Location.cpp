@@ -1,6 +1,6 @@
 #include "Location.h"
 
-string CLocation::addLocation(double latitude, double longitude, string title, string photo)
+string Location::addLocation(double latitude, double longitude, string title, string photo)
 {
 	char buf[255];
 	gcvt(latitude,10,buf);
@@ -9,13 +9,13 @@ string CLocation::addLocation(double latitude, double longitude, string title, s
 	string str_lon = buf;
 	return base_add("location(latitude,longitude,title,photo)", str_lat + "," + str_lon + ",\"" + title + "\",\"" + photo + "\"");
 }
-CLocation CLocation::getLocationAction(int id)
+Location Location::getLocationAction(int id)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
 	res = getBaseAction("Location", str_id);
-	CLocation total;
+	Location total;
 	if (res->next() == NULL){
 		total.id = NULL;
 		total.latitude = NULL;
@@ -31,18 +31,18 @@ CLocation CLocation::getLocationAction(int id)
 	total.photo = res->getString(5);
 	return total;
 }
-string CLocation::deleteLocation(int id)
+string Location::deleteLocation(int id)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
 	return base_del("location", str_id);
 }
-CLocation::CLocation()
+Location::Location()
 {
 }
 
 
-CLocation::~CLocation()
+Location::~Location()
 {
 }

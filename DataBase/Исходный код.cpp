@@ -9,11 +9,11 @@
 using namespace std;
 int main()
 {
-	CLocation_note a;
-	vector<CLocation_note>b= a.getSmbLocationNotesAction(1);
-	for (int i = 0; i < b.size(); i++){
-		cout << b[i].music_id << " ";
+	Location_note a;
+	vector<Location_note> total;
+	total = a.getLocationNotesAction(1, 3);
+	for (int i = 0; i < total.size(); i++){
+		cout << "music=" << total[i].user_id<<total[i].music_id<<total[i].music_id; //<< total[i].album << total[i].artist << total[i].duration << total[i].photo;
 	}
 	system("pause");
-	return 0;
 }
