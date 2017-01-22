@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "71CE89A5DD7806B527513F07EB4159A7BED9D81C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "71CE89A5DD7806B527513F07EB4159A7BED9D81C" : 9223372036854775807,
+    "81A2F82646050152022B16881A9420E374AA0F37" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DAB3E1DF-843F-49AD-B237-5B1F25B7911E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "71CE89A5DD7806B527513F07EB4159A7BED9D81C" : "Music_app\/",
+    "81A2F82646050152022B16881A9420E374AA0F37" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Client",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Client\/Client.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DrDarkySoul\/Music_app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71CE89A5DD7806B527513F07EB4159A7BED9D81C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DrDarkySoul\/Git.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81A2F82646050152022B16881A9420E374AA0F37"
+    }
+  ]
+}

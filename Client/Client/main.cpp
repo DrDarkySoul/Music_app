@@ -22,7 +22,7 @@ int main(int argc, const char * argv[])
     {
         asio::io_service io;
         asio::ip::tcp::socket socket(io);
-        asio::ip::tcp::endpoint endPoint(asio::ip::address::from_string("127.0.0.1"), 9090);
+        asio::ip::tcp::endpoint endPoint(asio::ip::address::from_string("35.166.168.206"), 80);
         system::error_code err;
         
         socket.connect(endPoint, err);
@@ -36,13 +36,15 @@ int main(int argc, const char * argv[])
             cout << "Connection established\n";
         }
         
-        asio::streambuf sbuf;
+        //asio::streambuf sbuf;
         //Получение сообщения от сервера
-        asio::read_until(socket, sbuf, "\0");
-        cout << &sbuf << endl;
+        //asio::read_until(socket, sbuf, "\0");
+        //cout << &sbuf << endl;
+        
+        string str = "Hello";
         
         //Отправка соощения на сервер
-//        asio::write(socket, asio::buffer(str));
+        asio::write(socket, asio::buffer(str));
         
         socket.close();
     }
