@@ -7,12 +7,15 @@ string music::addMusic(string title, string artist, string album, int duration, 
 	delete buf;
 	return base_add("music(title,artist,album,duration,photo)", "\"" + title + "\",\"" + artist + "\",\"" + album + "\"," + str_dur + ",\"" + photo + "\"");
 }
-string music::deleteMusic(int id)
+string music::deleteMusic(int id,Subject * subj)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
-	return base_del("music", str_id);
+	string result = base_del("location", str_id);
+	if (result == "YES"){
+		subj->Delid(make_pair(id, 1));
+	}
 }
 music music::getMusicAction(int id)
 {

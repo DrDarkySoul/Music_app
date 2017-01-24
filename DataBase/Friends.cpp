@@ -94,7 +94,14 @@ string Friends::deleteFriendAction(int user_id_1, int user_id_2)
 	base_complicated_del("Friends", "(user_id_1,user_id_2)=(" + str_2 + "," + str_1 + ")");
 	return base_complicated_del("Friends", "(user_id_1,user_id_2)=(" + str_1 + "," + str_2 + ")");
 }
-
+string Friends::deleteFriendActionbyUser_id(int user_id)
+{
+	char buf[255];
+	itoa(user_id, buf, 10);
+	string str_1 = buf;
+	base_complicated_del("Friends", "user_id_1=" + str_1);
+	return base_complicated_del("Friends", "user_id_2=" + str_1);
+}
 Friends::~Friends()
 {
 }

@@ -1,15 +1,22 @@
 #include "User.h"
 #include "CMySql.h"
+#include "Playlist.h"
+#include"Subject.h"
 string User::registrateAction(string user_login, string user_password, string user_email, string user_nickname, string user_photo)
 {
 	return base_add("User(login,password,email,photo,nickname)","\""+user_login+"\",\""+user_password+"\",\""+user_email+"\",\""+user_nickname+"\",\""+user_photo+"\"");
 }
-string User::deleteUser(int id)
+string User::deleteUser(int id,Subject * subj)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
-	return base_del("User",str_id);
+	const string result = base_del("User",str_id);
+	if (result == "YES"){ //удаление user_id во всех таблицах с помощью паттерна
+	//	Subject subj;
+		subj->Delid(make_pair(id, 0));
+	}
+	return result;
 }
 User User::getUserAction(int id)
 {

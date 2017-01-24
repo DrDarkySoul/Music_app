@@ -29,6 +29,27 @@ string Location_note::deleteLocationNoteAction(int user_id, int location_id, int
 	return base_complicated_del("Location_notes", "(user_id,location_id,music_id)=(" + str_1 + "," + str_2 + ","+str_3 + ")");
 }
 
+string Location_note::deleteLocationNoteActionbyUser_id(int user_id)
+{
+	char buf[255];
+	itoa(user_id, buf, 10);
+	string str_1 = buf;
+	return base_complicated_del("Location_notes", "user_id=" + str_1);
+}
+string Location_note::deleteLocationNoteActionbyMusic_id(int music_id)
+{
+	char buf[255];
+	itoa(music_id, buf, 10);
+	string str_1 = buf;
+	return base_complicated_del("Location_notes", "music_id=" + str_1);
+}
+string Location_note::deleteLocationNoteActionbyLocation_id(int location_id)
+{
+	char buf[255];
+	itoa(location_id, buf, 10);
+	string str_1 = buf;
+	return base_complicated_del("Location_notes", "location_id=" + str_1);
+}
 vector<Location_note> Location_note::getSmbLocationNotesAction(int user_id)
 {
 	char buf[255];

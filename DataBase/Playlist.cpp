@@ -24,7 +24,8 @@ vector<int> Playlist::getSmbPlayListAction(int user_id, int music_begin, int mus
 	string str_begin = buf;
 	itoa(music_end, buf, 10);
 	string str_end = buf;
-	res = getbasePlaylistAction(str_1, " AND id>=" + str_begin + " AND id<=" + str_end);
+	if ((music_begin == 0) && (music_end == 0)) res = getbasePlaylistAction(str_1, " ");
+	else res = getbasePlaylistAction(str_1, " AND id>=" + str_begin + " AND id<=" + str_end);
 	vector<int> Total;
 	if (res->next() == NULL){
 		Total.push_back(NULL);
@@ -44,7 +45,22 @@ string Playlist::deleteMusicFromPlayListAction(int user_id, int music_id)
 	string str_2 = buf;
 	return base_complicated_del("Playlist", "(user_id,music_id)=(" + str_1 + "," + str_2 + ")");
 }
+string Playlist::deleteMusic_byUser_id_FromPlayListAction(int user_id)
+{
+	char buf[255];
+	itoa(user_id, buf, 10);
+	string str_1 = buf;
+	return base_complicated_del("Playlist", "user_id=" + str_1);
+}
 
+
+string Playlist::deleteMusic_byMusic_id_FromPlayListAction(int music_id)
+{
+	char buf[255];
+	itoa(music_id, buf, 10);
+	string str_1 = buf;
+	return base_complicated_del("Playlist", "music_id=" + str_1);
+}
 
 vector<music> Playlist::getSmbPlayListFullAction(int user_id, int begin, int end)
 {

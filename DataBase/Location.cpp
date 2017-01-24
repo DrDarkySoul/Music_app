@@ -31,12 +31,16 @@ Location Location::getLocationAction(int id)
 	total.photo = res->getString(5);
 	return total;
 }
-string Location::deleteLocation(int id)
+string Location::deleteLocation(int id, Subject * subj)
 {
 	char buf[255];
 	itoa(id, buf, 10);
 	string str_id = buf;
-	return base_del("location", str_id);
+	string result = base_del("location", str_id);
+	if (result == "YES"){
+		subj->Delid(make_pair(id, 2));
+	}
+	return result;
 }
 Location::Location()
 {

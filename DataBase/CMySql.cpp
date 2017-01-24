@@ -79,7 +79,7 @@ sql::ResultSet* CMySql::getbaseFriendsAction(string first,string second)
 sql::ResultSet* CMySql::getbasePlaylistAction(string first, string second)
 {
 	string query = "select * from playlist where user_id=" + first + second;
-	//cout << query;
+	cout << query;
 	return stmt->executeQuery(query);
 }
 
